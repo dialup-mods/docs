@@ -1,0 +1,91 @@
+a:link {
+  color: #0000ee;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #551a8b;
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #ff9900;
+}
+
+body {
+  font-family: "Verdana", "Arial", sans-serif;
+  background-color: #0e1b3f; /* deep blue, easier on eyes */
+}
+
+.md-header {
+  background-color: #1f3280 !important;
+}
+
+/* Optional: make code blocks yellow on black like old terminals */
+pre code {
+  background-color: #000000;
+  color: #ffff00;
+}
+
+.mermaid {
+  background-color: #0df6e3;
+  color: #000;
+  border: 1px dashed #00ffcc;
+  padding: 1.5rem;
+  border-radius: 6px;
+  font-family: 'Courier New', monospace;
+  box-shadow: 0 0 12px #0df6e3;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* Invert everything in light mode */
+[data-md-color-scheme="default"] {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+/* Revert images and diagrams */
+/*
+[data-md-color-scheme="default"] img,
+[data-md-color-scheme="default"] .mermaid {
+  filter: invert(1) hue-rotate(180deg);
+}
+*/
+
+/* Invert everything in light mode */
+/*
+[data-md-color-scheme="default"] {
+  background-color: black !important;
+  color: white !important;
+  filter: invert(1) contrast(1.2) saturate(2) !important;
+}
+*/
+
+a:link {
+  color: #0000EE;
+}
+
+a:visited {
+  color: #551A8B;
+}
+
+a {
+  text-decoration: underline !important;
+  font-family: "Times New Roman", serif !important;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+
+/*
+code {
+  background: #000 !important;
+  color: #0df6e3 !important;
+}
+
+ */

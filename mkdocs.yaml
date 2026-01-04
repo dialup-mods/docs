@@ -1,0 +1,99 @@
+site_name: Dial-Up Framework Documentation Zone
+
+extra_css:
+  - css/theme.css
+
+extra_javascript:
+  - js/blink-polyfill.js
+  - js/exit-webring-warning.js
+
+markdown_extensions:
+  - pymdownx.superfences:
+      # make exceptions to highlighting of code:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid_custom
+
+# or, if you want themable
+#  - mermaid2:
+#      version: '9.4.3' # only works with version < 10
+#      arguments:
+#        theme: 'base'
+#        themeVariables:
+#          primaryColor: '#FDfcFe'
+#          primaryTextColor: '#000'
+#          primaryBorderColor: '#BB00BB'
+#          lineColor: '#F8E449'
+#          secondaryColor: '#CCBAE9'
+#          tertiaryColor: '#fff'
+
+plugins:
+  - search
+  - mermaid2:
+      version: '9.4.3' # only works with version < 10
+      arguments:
+        theme: 'base'
+        themeVariables:
+          primaryColor: '#FDfcFe'
+          primaryTextColor: '#000'
+          primaryBorderColor: '#BB00BB'
+          lineColor: '#F8E449'
+          secondaryColor: '#CCBAE9'
+          tertiaryColor: '#fff'
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - header.autohide
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.indexes
+
+nav:
+  - Home: index.md
+  - System Diagrams: flow.md
+  - Plugin API: plugins.md
+nav:
+  - Home: index.md
+  - Quick Start: quick_start.md
+  - System Overview:
+    - Architecture: architecture.md
+    - System Diagrams: flow.md
+    - Dial-Up Core: dialup_core.md
+    - Public Interfaces: ../include/v1/cross_module/README.md
+    - AIM (Injection Module): aim.md
+    - SDK Generator: sdk_gen.md
+  - Plugin Development:
+    - Overview: plugins.md
+    - Plugin API: plugin/api.md
+    - Plugin Interface: plugin/interface.md
+    - Hot Reloading: plugin/hot_reloading.md
+    - Examples: plugin/examples.md
+  - SDK Generation:
+    - sdk.md
+    - Generating SDK: sdk/generating.md
+    - Building SDK: sdk/building.md
+    - Integration: sdk/integration.md
+  - Advanced:
+    - advanced.md
+    - Cross-DLL Safety: advanced/cross-dll_safety.md
+    - Type Erasure: advanced/type_erasure.md
+    - Memory Management: advanced/memory_management.md
